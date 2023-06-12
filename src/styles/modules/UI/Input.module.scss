@@ -1,0 +1,9 @@
+@import './src/styles/rest/functions';
+@import './src/styles/rest/vars';
+
+.input {
+  font-size: em(14, 16);
+  font-weight: 500;
+  padding: 2 * $margin_padding_step $margin_padding_step;
+  width: 100%;
+}

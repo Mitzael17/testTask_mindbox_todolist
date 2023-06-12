@@ -1,0 +1,52 @@
+@import "../rest/vars";
+
+.task {
+  display: flex;
+
+  &.completed {
+    text-decoration-line: line-through;
+    color: lightgray;
+  }
+
+}
+
+.checkbox {
+
+  display: block;
+  flex-shrink: 0;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid lightgray;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: $margin_padding_step;
+
+  span {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: $duration_step clip-path, $duration_step * 0.75 background-color;
+    background: transparent;
+    clip-path: polygon(0 0, 50% 0, 100% 0, 100% 100%, 50% 100%, 0 100%);
+  }
+  
+  input {
+    display: none;
+
+    &:checked + span {
+      width: 100%;
+      height: 100%;
+      background: green;
+      clip-path: polygon(22% 45%, 41% 64%, 86% 26%, 86% 38%, 40% 78%, 15% 50%);
+    }
+
+  }
+
+}
+
+.text {
+  font-size: 1.3em;
+  font-weight: 300;
+  word-break: break-word;
+}

@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import 'rest/reset';
+@import 'rest/functions';
+@import 'rest/vars';
+@import 'rest/mixins';
+
+@import "BEM/todolist";
+
+html {
+  font-family: 'Inter', sans-serif;
+  color: $dark_color;
+}
+
+#root {
+  min-height: vh(100);
+  display: flex;
+  background: $light_color;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 3em;
+  color: #ff5050;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.paddings-step {
+  padding: $margin_padding_step;
+}
+
+.border-top {
+  border-top: 1px solid lightgray;
+}
+
+.border-bottom {
+  border-bottom: 1px solid lightgray;
+}
+
+.border-left {
+  border-left: 1px solid lightgray;
+}
+
+.border-right {
+  border-right: 1px solid lightgray;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.defaultTransitionGroupElement-enter {
+  transform: translateX(120%);
+}
+
+.defaultTransitionGroupElement-enter-active {
+  transform: translateX(0);
+  transition: transform 500ms ease-in;
+}
+
+.defaultTransitionGroupElement-exit {
+  transform: translateX(0);
+}
+
+.defaultTransitionGroupElement-exit-active {
+  transform: translateX(120%);
+  transition: transform 500ms ease-in;
+}

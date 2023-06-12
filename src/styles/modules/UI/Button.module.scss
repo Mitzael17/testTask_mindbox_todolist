@@ -1,0 +1,24 @@
+@import './src/styles/rest/functions';
+@import './src/styles/rest/vars';
+
+.button {
+  font-size: em(14, 16);
+  font-weight: 500;
+  background: $dark_color;
+  color: $light_color;
+  padding: $margin_padding_step 2 * $margin_padding_step;
+  border-radius: 5px;
+  transition: $duration_step all;
+  border: 1px solid $dark_color;
+
+  &:active,
+  &:hover {
+    color: $dark_color;
+    background: $light_color;
+  }
+
+  &:active {
+    transform: scale(.95);
+  }
+
+}

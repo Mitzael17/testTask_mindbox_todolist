@@ -1,0 +1,5 @@
+@mixin usePosition($left: 0, $top: 0, $position: absolute) {
+  position: $position;
+  left: $left;
+  top: $top;
+}
